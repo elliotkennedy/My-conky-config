@@ -40,7 +40,7 @@ override_utf8_locale no
 TEXT
 ${font sans-serif:bold:size=8}SYSTEM
 ${hr}
-${font sans-serif:bold:size=8}IP: $alignr ${addr wlan0}
+${font sans-serif:bold:size=8}IP: $alignr ${addr wlp8s0}
 ${font sans-serif:bold:size=8}HOST:$alignr$nodename.local
 ${font sans-serif:bold:size=8}UPTIME:$alignr$uptime_short
 
@@ -59,21 +59,10 @@ $membar
 SWAP $alignc ${swap} / ${swapmax} $alignr ${swapperc}%
 ${swapbar}
 
-
 ${font sans-serif:bold:size=8}STORAGE
 ${hr}
-${font sans-serif:normal:size=8}RAM $alignc $mem / $memmax $alignr $memperc%
-$membar
-SWAP $alignc ${swap} / ${swapmax} $alignr ${swapperc}%
-${swapbar}
-
-
-${font sans-serif:bold:size=8}STORAGE
-${hr}
-${font sans-serif:normal:size=8}root $alignc ${fs_used /} / ${fs_size /} $align$
+${font sans-serif:normal:size=8}root $alignc ${fs_used /} / ${fs_size /} $alignr 
 ${fs_bar /}
-
-
 
 ${font sans-serif:bold:size=8}TOP  PROCESSES
 ${hr}
@@ -83,11 +72,10 @@ $font${top_mem name 3}${alignr}${top mem 3} %
 $font${top_mem name 4}${alignr}${top mem 4} %
 $font${top_mem name 5}${alignr}${top mem 5} %
 
-
 ${font sans-serif:bold:size=8}NETWORK
 ${hr}
-Signal: $alignr ${wireless_link_qual_perc wlan0}%
-${downspeedgraph wlan0}
-Download: ${downspeed wlan0} $alignr Total: ${totaldown wlan0}
+Signal: $alignr ${wireless_link_qual_perc wlp8s0}%
+${downspeedgraph wlp8s0}
+Download: ${downspeed wlp8s0} $alignr Total: ${totaldown wlp8s0}
 ${upspeedgraph wlan0}
-Upload: ${upspeed wlan0} $alignr Total: ${totalup wlan0}
+Upload: ${upspeed wlp8s0} $alignr Total: ${totalup wlp8s0}
